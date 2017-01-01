@@ -13,7 +13,8 @@ class AnagramFinder:
         tokenised_keyword = self.tokenise(self.keyword)
         for word in self.dictionary:
             if self.tokenise(word) == tokenised_keyword:
-                self.anagrams.append(word)
+                if self.keyword != word:
+                    self.anagrams.append(word)
         return self.anagrams
 
     def tokenise(self, target):
