@@ -5,7 +5,7 @@
 class AnagramFinder:
 
     def __init__(self, keyword, dictionary):
-        self.keyword = keyword.strip()
+        self.keyword = keyword.strip().lower()
         self.dictionary = dictionary
         self.anagrams = []
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     stripped_dict = []
     with open(dictionary_file) as dict:
         for line in dict.readlines():
-            stripped_dict.append(line.strip())
+            stripped_dict.append(line.strip().lower())
 
     af = AnagramFinder(sys.argv[1], stripped_dict)
     for anagram in af.find():
