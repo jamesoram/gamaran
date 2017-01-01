@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # simple anagram finder
 # if you don't have a dictionary you can download one from:
 # https://github.com/dwyl/english-words
